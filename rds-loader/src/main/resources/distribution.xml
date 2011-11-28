@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assembly>
+	<id>bin</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<files>
+		<file>
+			<source>target/rds-loader-${snapshot.version}.jar</source>
+			<outputDirectory>/System/Jar</outputDirectory>
+		</file>
+		<file>
+			<source>src/main/resources/loader.sh</source>
+			<outputDirectory>/</outputDirectory>
+		</file>
+	</files>
+	<dependencySets>
+		<dependencySet>
+			<unpack>false</unpack>
+			<outputDirectory>/System/Jar</outputDirectory>
+		</dependencySet>
+	</dependencySets>
+</assembly>
