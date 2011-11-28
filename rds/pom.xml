@@ -1,0 +1,205 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.all.backend</groupId>
+	<artifactId>rds</artifactId>
+	<packaging>war</packaging>
+	<name>rds</name>
+	<version>${snapshot.version}</version>
+
+	<parent>
+		<groupId>com.all.maven</groupId>
+		<artifactId>parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<repositories>
+		<repository>
+			<id>ArchivaSnapshots</id>
+			<url>http://ci.undahee.net/archiva/repository/snapshots</url>
+		</repository>
+		<repository>
+			<id>ArchivaInternal</id>
+			<url>http://ci.undahee.net/archiva/repository/internal</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>archiva.internal</id>
+			<name>Internal Release Repository</name>
+			<url>http://ci.undahee.net/archiva/repository/internal</url>
+		</repository>
+		<snapshotRepository>
+			<id>archiva.snapshots</id>
+			<name>Internal Snapshot Repository</name>
+			<url>http://ci.undahee.net/archiva/repository/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<!-- DEFAULT PROPERTIES -->
+	<properties>
+		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+
+		<!-- APP SETTINGS FOR FILESYSTEM -->
+		<chunks.path>/opt/DEPLOYMENTS/backups/all/rest/chunks/</chunks.path>
+
+		<!-- SETTINGS PROPERTIES -->
+		<jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
+		<jdbc.url>jdbc:mysql://localhost:3306/downloads</jdbc.url>
+		<jdbc.username>dwusr</jdbc.username>
+		<jdbc.password>pwddwusr</jdbc.password>
+		
+		<hibernate.dialect>org.hibernate.dialect.MySQLDialect</hibernate.dialect>
+		<hibernate.hbm2ddl.auto>update</hibernate.hbm2ddl.auto>
+		<hibernate.cache.provider_class>org.hibernate.cache.NoCacheProvider</hibernate.cache.provider_class>
+		<hibernate.show_sql>false</hibernate.show_sql>
+		<hibernate.format_sql>false</hibernate.format_sql>
+		<hibernate.show_comments>false</hibernate.show_comments>
+		<hibernate.search.directory_provider>filesystem</hibernate.search.directory_provider>
+		<hibernate.search.indexBase>/var/lucene/indexes</hibernate.search.indexBase>
+	</properties>
+
+    <!-- PROFILE FOR LOCALHOST -->
+	<profiles>
+		<profile>
+			<id>localhost</id>
+			<properties>
+				<!-- SETTINGS PROPERTIES -->
+				<jdbc.driverClassName>org.hsqldb.jdbcDriver</jdbc.driverClassName>
+				<jdbc.url>jdbc:hsqldb:file:rds</jdbc.url>
+				<jdbc.username>sa</jdbc.username>
+				<jdbc.password></jdbc.password>
+				<hibernate.dialect>org.hibernate.dialect.HSQLDialect</hibernate.dialect>
+				<hibernate.show_sql>true</hibernate.show_sql>
+				<hibernate.show_comments>true</hibernate.show_comments>
+				<hibernate.search.indexBase>target/lucene/indexes</hibernate.search.indexBase>
+			</properties>
+		</profile>
+	</profiles>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.web.servlet</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.3</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.context.support</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.2.2</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>${javassist.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.3</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>3.6.1.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-search</artifactId>
+			<version>3.3.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>${hsqldb.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-connector-java.version}</version>
+		</dependency>
+		<!-- ALL.COM DEPENDENCIES -->
+		<dependency>
+			<groupId>com.all.testing</groupId>
+			<artifactId>mockRunner</artifactId>
+			<version>${snapshot.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.all.backend</groupId>
+			<artifactId>rds-model</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>rds</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>maven-jetty-plugin</artifactId>
+				<version>6.1.26</version>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>tomcat-maven-plugin</artifactId>
+				<version>1.1</version>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<excludes>
+					<exclude>config/**</exclude>
+					<exclude>META-INF/**</exclude>
+				</excludes>
+				<filtering>false</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/resources/config</directory>
+				<filtering>true</filtering>
+				<targetPath>config</targetPath>
+			</resource>
+		</resources>
+	</build>
+
+</project>
