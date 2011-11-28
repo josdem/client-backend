@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+	<context:annotation-config />
+
+	<context:component-scan base-package="com.all.uberpeer" />
+	<context:component-scan base-package="com.all.peer" />
+	<context:component-scan base-package="com.all.services" />
+	<context:component-scan base-package="com.all.dht" />
+	<context:component-scan base-package="com.all.networking" />
+	<context:component-scan base-package="com.all.messengine" />
+
+	<bean class="com.all.messengine.impl.DefaultMessEngine" />
+
+	<bean class="org.springframework.web.client.RestTemplate" />
+
+	<util:properties id="dhtConfig"
+		location="classpath:/config/dhtConfig.properties" />
+
+	<bean id="validatorFactory" class="javax.validation.Validation"
+		factory-method="buildDefaultValidatorFactory" />
+
+	<bean id="validator" class="org.hibernate.validation.engine.ValidatorImpl"
+		factory-bean="validatorFactory" factory-method="getValidator" />
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="transactionTemplate"
+		class="org.springframework.transaction.support.TransactionTemplate">
+		<property name="transactionManager" ref="transactionManager"></property>
+	</bean>
+
+	<bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/backend" />
+		<property name="username" value="beusr" />
+		<property name="password" value="pwdbeusr" />
+	</bean>
+
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="datasource" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.all.backend.commons.library.LibrarySyncStatus
+				</value>
+				<value>com.all.backend.commons.library.LibrarySnapshot
+				</value>
+				<value>com.all.backend.commons.library.LibraryDelta
+				</value>
+				<value>com.all.backend.commons.media.MusicTrack
+				</value>
+				<value>com.all.backend.commons.newsfeed.FeedSubscriber
+				</value>
+				<value>com.all.backend.commons.newsfeed.Feed
+				</value>
+				<value>com.all.shared.stats.UserSpecs
+				</value>
+				<value>com.all.shared.stats.usage.UserActionStat
+				</value>
+				<value>com.all.shared.stats.UserLibraryOverview
+				</value>
+				<value>com.all.shared.stats.UserSessionStat
+				</value>
+				<value>com.all.shared.stats.MediaImportStat
+				</value>
+				<value>com.all.shared.stats.MediaContainerStat
+				</value>
+				<value>com.all.shared.stats.AboutUsStat
+				</value>
+				<value>com.all.shared.stats.PlayCountStat
+				</value>
+				<value>com.all.shared.stats.SkipCountStat
+				</value>
+				<value>com.all.shared.stats.TrackRatingStat
+				</value>
+				<value>com.all.shared.stats.SearchP2PWordStat
+				</value>
+				<value>com.all.shared.stats.ErrorEventStat
+				</value>
+				<value>com.all.shared.stats.RecommendedTrackTwitterStat
+				</value>
+				<value>com.all.shared.stats.PostedListeningTrackTwitterStat
+				</value>
+				<value>com.all.shared.model.User</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.current_session_context_class">thread</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider
+				</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.format_sql">false</prop>
+				<prop key="hibernate.show_comments">false</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="uberpeerService" class="com.all.uberpeer.Uberpeer" />
+	<bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+		<property name="serviceName" value="UberpeerService" />
+		<property name="service" ref="uberpeerService" />
+		<property name="serviceInterface"
+			value="com.all.backend.commons.services.UberpeerService" />
+	</bean>
+
+
+</beans>
