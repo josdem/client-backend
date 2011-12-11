@@ -187,7 +187,7 @@
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright [yyyy] [name of copyright owner]
+   Copyright 2011 Eric Haddad Koenig
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -392,7 +392,7 @@ public class TestTrackService {
 	@SuppressWarnings("unchecked")
 	@Test
 	public void shouldFindTracksByKeywords() throws Exception {
-		String keyword = "SÓmë Keywörd";
+		String keyword = "Sï¿½mï¿½ Keywï¿½rd";
 
 		service.findTracksByKeyword(keyword);
 
