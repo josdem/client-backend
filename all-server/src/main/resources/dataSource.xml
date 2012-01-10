@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc" xmlns:oxm="http://www.springframework.org/schema/oxm"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+		http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="datasource" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.all.backend.commons.alert.AlertEntity</value>
+				<value>com.all.backend.commons.contact.ContactsRelationship</value>
+				<value>com.all.backend.commons.contact.DefaultContacts</value>
+				<value>com.all.backend.commons.library.LibraryDelta</value>
+				<value>com.all.backend.commons.library.LibrarySnapshot</value>
+				<value>com.all.backend.commons.library.LibrarySyncStatus</value>
+				<value>com.all.backend.commons.newsfeed.Feed</value>
+				<value>com.all.backend.commons.newsfeed.FeedSubscriber</value>
+				<value>com.all.backend.commons.signup.AboutUs</value>
+				<value>com.all.backend.commons.signup.PasswordResetRequest</value>
+				<value>com.all.backend.commons.signup.RegistrationPending</value>
+				<value>com.all.backend.commons.media.MusicTrack</value>
+				<value>com.all.shared.model.Avatar</value>
+				<value>com.all.shared.model.City</value>
+				<value>com.all.shared.model.ContactRequest</value>
+				<value>com.all.shared.model.PendingEmail</value>
+				<value>com.all.shared.model.User</value>
+				<value>com.all.shared.alert.AllVersionNotification</value>
+				<value>com.all.shared.stats.UserSpecs</value>
+				<value>com.all.shared.stats.usage.UserActionStat</value>
+				<value>com.all.shared.stats.UserLibraryOverview</value>
+				<value>com.all.shared.stats.UserSessionStat</value>
+				<value>com.all.shared.stats.MediaImportStat</value>
+				<value>com.all.shared.stats.MediaContainerStat</value>
+				<value>com.all.shared.stats.FeedStat</value>
+				<value>com.all.shared.stats.AboutUsStat</value>
+				<value>com.all.shared.stats.PlayCountStat</value>
+				<value>com.all.shared.stats.SkipCountStat</value>
+				<value>com.all.shared.stats.TrackRatingStat</value>
+				<value>com.all.shared.stats.SearchP2PWordStat</value>
+				<value>com.all.shared.stats.ErrorEventStat</value>
+				<value>com.all.shared.stats.RecommendedTrackTwitterStat</value>
+				<value>com.all.shared.stats.PostedListeningTrackTwitterStat</value>
+				<value>com.all.shared.stats.RecommendedTrackFacebookStat</value>
+                <value>com.all.shared.stats.DownloadStat</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.cache.provider_class">${hibernate.cache.provider_class}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+				<prop key="hibernate.show_comments">${hibernate.show_comments}</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>
