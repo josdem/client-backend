@@ -1,0 +1,136 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.all.backend</groupId>
+	<artifactId>dht</artifactId>
+	<packaging>jar</packaging>
+	<version>${snapshot.version}</version>
+	<name>dht</name>
+
+	<parent>
+		<artifactId>parent</artifactId>
+		<groupId>com.all.maven</groupId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<properties>
+		<limewire.version>20100219131555</limewire.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>archiva.internal</id>
+			<name>Internal Release Repository</name>
+			<url>http://ci.undahee.net/archiva/repository/internal</url>
+		</repository>
+		<repository>
+			<id>archiva.snapshot</id>
+			<name>Snapshot Repository</name>
+			<url>http://ci.undahee.net/archiva/repository/snapshot</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>archiva.internal</id>
+			<name>Internal Release Repository</name>
+			<url>http://ci.undahee.net/archiva/repository/internal</url>
+		</repository>
+		<snapshotRepository>
+			<id>archiva.snapshots</id>
+			<name>Internal Snapshot Repository</name>
+			<url>http://ci.undahee.net/archiva/repository/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>${commons-logging.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<version>2.0</version>
+			<artifactId>guice</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.limewire</groupId>
+			<artifactId>mojito</artifactId>
+			<version>${limewire.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.limewire</groupId>
+			<artifactId>io</artifactId>
+			<version>${limewire.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.limewire</groupId>
+			<artifactId>setting</artifactId>
+			<version>${limewire.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.limewire</groupId>
+			<artifactId>security</artifactId>
+			<version>${limewire.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.limewire</groupId>
+			<artifactId>statistic</artifactId>
+			<version>${limewire.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.limewire</groupId>
+			<artifactId>collection</artifactId>
+			<version>${limewire.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.limewire</groupId>
+			<artifactId>common</artifactId>
+			<version>${limewire.version}</version>
+		</dependency>
+
+		<!-- ALL.COM DEPENDENCIES -->
+		<dependency>
+			<groupId>com.all</groupId>
+			<artifactId>networking</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<excludes>
+					<exclude>log4j.properties</exclude>
+				</excludes>
+			</resource>
+		</resources>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>localhost</id>
+			<build>
+				<resources>
+					<resource>
+						<directory>src/main/resources</directory>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+	</profiles>
+
+</project>
