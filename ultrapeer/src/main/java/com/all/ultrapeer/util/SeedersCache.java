@@ -221,7 +221,7 @@ import javax.annotation.PreDestroy;
 import org.apache.commons.collections.Factory;
 import org.apache.commons.collections.map.MultiValueMap;
 import org.apache.commons.logging.Log;
-import org.limewire.logging.LogFactory;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
