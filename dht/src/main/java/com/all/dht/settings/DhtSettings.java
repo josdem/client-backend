@@ -225,8 +225,8 @@ import java.util.concurrent.TimeUnit;
 import javax.annotation.PostConstruct;
 
 import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.limewire.io.SimpleNetworkInstanceUtils;
-import org.limewire.logging.LogFactory;
 import org.limewire.mojito.db.DHTValueType;
 import org.limewire.mojito.statistics.DHTStatsManager;
 import org.limewire.mojito.util.ContactUtils;
@@ -257,9 +257,9 @@ public class DhtSettings {
 	@Autowired
 	private Properties dhtConfig;
 
-	private Log log = LogFactory.getLog(this.getClass());
-
 	private DhtNode dhtNode;
+
+	private Log log = LogFactory.getLog(this.getClass());
 
 	public static DhtSettings getInstance() throws IOException {
 		if (instance == null) {
