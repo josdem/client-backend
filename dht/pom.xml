@@ -100,11 +100,21 @@
 			<artifactId>common</artifactId>
 			<version>${limewire.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-core</artifactId>
+			<version>2.0.4</version>
+		</dependency>
+		
 		<!-- ALL.COM DEPENDENCIES -->
 		<dependency>
 			<groupId>com.all</groupId>
 			<artifactId>networking</artifactId>
+			<version>${snapshot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.all.shared</groupId>
+			<artifactId>shared</artifactId>
 			<version>${snapshot.version}</version>
 		</dependency>
 	</dependencies>
