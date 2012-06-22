@@ -1,0 +1,1004 @@
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.some file problem
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.No coverart for: trackId
+ INFO [main] (MobileTopHundredController.java:35) - 
+ACTION:ListCategories:
+ INFO [main] (MobileTopHundredController.java:43) - 
+ACTION:ListTopPlaylistByCategory:1
+ INFO [main] (MobileTopHundredController.java:51) - 
+ACTION:ListTopPlaylistTracks:123415
+ INFO [main] (MobileTrackController.java:47) - 
+ACTION:CacheTrack:'trackId'
+ INFO [main] (MobileTrackController.java:40) - 
+ACTION:SearchTracks:'keyword'
+ERROR [main] (CacheService.java:69) - Exception caching track : trackId.mp3
+java.io.IOException: E.g., Permission Denied
+	at com.all.mobile.web.services.CacheService.cacheTrack(CacheService.java:65)
+	at com.all.mobile.web.services.TestCacheService.shouldFailWhenCannotCacheFile(TestCacheService.java:159)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ INFO [main] (SearchService.java:98) - Lucene indexes creation took [ms]: 2
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ERROR [main] (SearchService.java:94) - Unexpected exception creating lucene indexes
+java.lang.InterruptedException
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:92)
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:1)
+	at com.all.mobile.web.services.TestSearchService.shouldThrowExceptionInInitializeLuceneIndex(TestSearchService.java:137)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:22)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ERROR [main] (SearchService.java:69) - Unexpected error looking for SÓmë Keywörd
+java.lang.RuntimeException: some lucene exception
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:59)
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:1)
+	at com.all.mobile.web.services.TestSearchService.shouldReturnEmptyCollectionIfExceptionSearchingTracks(TestSearchService.java:171)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ INFO [main] (MobileTopHundredController.java:35) - 
+ACTION:ListCategories:
+ INFO [main] (MobileTopHundredController.java:43) - 
+ACTION:ListTopPlaylistByCategory:1
+ INFO [main] (MobileTopHundredController.java:51) - 
+ACTION:ListTopPlaylistTracks:123415
+ INFO [main] (MobileTrackController.java:47) - 
+ACTION:CacheTrack:'trackId'
+ INFO [main] (MobileTrackController.java:40) - 
+ACTION:SearchTracks:'keyword'
+ERROR [main] (CacheService.java:69) - Exception caching track : trackId.mp3
+java.io.IOException: E.g., Permission Denied
+	at com.all.mobile.web.services.CacheService.cacheTrack(CacheService.java:65)
+	at com.all.mobile.web.services.TestCacheService.shouldFailWhenCannotCacheFile(TestCacheService.java:159)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:146)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at $Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ INFO [main] (SearchService.java:98) - Lucene indexes creation took [ms]: 1
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ERROR [main] (SearchService.java:94) - Unexpected exception creating lucene indexes
+java.lang.InterruptedException
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:92)
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:1)
+	at com.all.mobile.web.services.TestSearchService.shouldThrowExceptionInInitializeLuceneIndex(TestSearchService.java:137)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:22)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:146)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at $Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+ERROR [main] (SearchService.java:69) - Unexpected error looking for SÓmë Keywörd
+java.lang.RuntimeException: some lucene exception
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:59)
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:1)
+	at com.all.mobile.web.services.TestSearchService.shouldReturnEmptyCollectionIfExceptionSearchingTracks(TestSearchService.java:171)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:146)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at $Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:145)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:87)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.some file problem
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.No coverart for: trackId
+ERROR [main] (CacheService.java:69) - Exception caching track : trackId.mp3
+java.io.IOException: E.g., Permission Denied
+	at com.all.mobile.web.services.CacheService.cacheTrack(CacheService.java:65)
+	at com.all.mobile.web.services.TestCacheService.shouldFailWhenCannotCacheFile(TestCacheService.java:159)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:115)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)
+ INFO [main] (WidgetController.java:32) - 
+ACTION:getting playlist:1
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.some file problem
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.No coverart for: trackId
+ INFO [main] (MobileTrackController.java:47) - 
+ACTION:CacheTrack:'trackId'
+ INFO [main] (MobileTrackController.java:40) - 
+ACTION:SearchTracks:'keyword'
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ INFO [main] (SearchService.java:98) - Lucene indexes creation took [ms]: 1
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ERROR [main] (SearchService.java:94) - Unexpected exception creating lucene indexes
+java.lang.InterruptedException
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:92)
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:85)
+	at com.all.mobile.web.services.TestSearchService.shouldThrowExceptionInInitializeLuceneIndex(TestSearchService.java:137)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:22)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:115)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)
+ERROR [main] (SearchService.java:69) - Unexpected error looking for SÓmë Keywörd
+java.lang.RuntimeException: some lucene exception
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:59)
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:53)
+	at com.all.mobile.web.services.TestSearchService.shouldReturnEmptyCollectionIfExceptionSearchingTracks(TestSearchService.java:171)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:115)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)
+ INFO [main] (MobileTopHundredController.java:35) - 
+ACTION:ListCategories:
+ INFO [main] (MobileTopHundredController.java:43) - 
+ACTION:ListTopPlaylistByCategory:1
+ INFO [main] (MobileTopHundredController.java:51) - 
+ACTION:ListTopPlaylistTracks:123415
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.some file problem
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.No coverart for: trackId
+ INFO [main] (MobileTopHundredController.java:35) - 
+ACTION:ListCategories:
+ INFO [main] (MobileTopHundredController.java:43) - 
+ACTION:ListTopPlaylistByCategory:1
+ INFO [main] (MobileTopHundredController.java:51) - 
+ACTION:ListTopPlaylistTracks:123415
+ INFO [main] (MobileTrackController.java:50) - 
+ACTION:CacheTrack:'trackId'
+ INFO [main] (MobileTrackController.java:43) - 
+ACTION:SearchTracks:'keyword'
+ INFO [main] (MobileTrackController.java:59) - 
+ACTION:Content for Widget:'model'
+ERROR [main] (CacheService.java:69) - Exception caching track : trackId.mp3
+java.io.IOException: E.g., Permission Denied
+	at com.all.mobile.web.services.CacheService.cacheTrack(CacheService.java:65)
+	at com.all.mobile.web.services.TestCacheService.shouldFailWhenCannotCacheFile(TestCacheService.java:159)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ INFO [main] (SearchService.java:98) - Lucene indexes creation took [ms]: 1
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ERROR [main] (SearchService.java:94) - Unexpected exception creating lucene indexes
+java.lang.InterruptedException
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:92)
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:1)
+	at com.all.mobile.web.services.TestSearchService.shouldThrowExceptionInInitializeLuceneIndex(TestSearchService.java:137)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:22)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ERROR [main] (SearchService.java:69) - Unexpected error looking for SÓmë Keywörd
+java.lang.RuntimeException: some lucene exception
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:59)
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:1)
+	at com.all.mobile.web.services.TestSearchService.shouldReturnEmptyCollectionIfExceptionSearchingTracks(TestSearchService.java:171)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ INFO [main] (WidgetController.java:32) - 
+ACTION:getting playlist:1
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.some file problem
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.No coverart for: trackId
+ INFO [main] (MobileTopHundredController.java:35) - 
+ACTION:ListCategories:
+ INFO [main] (MobileTopHundredController.java:43) - 
+ACTION:ListTopPlaylistByCategory:1
+ INFO [main] (MobileTopHundredController.java:51) - 
+ACTION:ListTopPlaylistTracks:123415
+ INFO [main] (MobileTrackController.java:50) - 
+ACTION:CacheTrack:'trackId'
+ INFO [main] (MobileTrackController.java:43) - 
+ACTION:SearchTracks:'keyword'
+ INFO [main] (MobileTrackController.java:59) - 
+ACTION:Content for Widget:'model'
+ERROR [main] (CacheService.java:69) - Exception caching track : trackId.mp3
+java.io.IOException: E.g., Permission Denied
+	at com.all.mobile.web.services.CacheService.cacheTrack(CacheService.java:65)
+	at com.all.mobile.web.services.TestCacheService.shouldFailWhenCannotCacheFile(TestCacheService.java:159)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ INFO [main] (SearchService.java:98) - Lucene indexes creation took [ms]: 1
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ERROR [main] (SearchService.java:94) - Unexpected exception creating lucene indexes
+java.lang.InterruptedException
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:92)
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:1)
+	at com.all.mobile.web.services.TestSearchService.shouldThrowExceptionInInitializeLuceneIndex(TestSearchService.java:137)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:22)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ERROR [main] (SearchService.java:69) - Unexpected error looking for SÓmë Keywörd
+java.lang.RuntimeException: some lucene exception
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:59)
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:1)
+	at com.all.mobile.web.services.TestSearchService.shouldReturnEmptyCollectionIfExceptionSearchingTracks(TestSearchService.java:171)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ INFO [main] (WidgetController.java:32) - 
+ACTION:getting playlist:1
+ERROR [main] (CacheService.java:69) - Exception caching track : trackId.mp3
+java.io.IOException: E.g., Permission Denied
+	at com.all.mobile.web.services.CacheService.cacheTrack(CacheService.java:65)
+	at com.all.mobile.web.services.TestCacheService.shouldFailWhenCannotCacheFile(TestCacheService.java:159)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:115)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)
+ INFO [main] (WidgetController.java:32) - 
+ACTION:getting playlist:1
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.some file problem
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.No coverart for: trackId
+ INFO [main] (MobileTrackController.java:50) - 
+ACTION:CacheTrack:'trackId'
+ INFO [main] (MobileTrackController.java:43) - 
+ACTION:SearchTracks:'keyword'
+ INFO [main] (MobileTrackController.java:59) - 
+ACTION:Content for Widget:'model'
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ INFO [main] (SearchService.java:98) - Lucene indexes creation took [ms]: 1
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ERROR [main] (SearchService.java:94) - Unexpected exception creating lucene indexes
+java.lang.InterruptedException
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:92)
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:85)
+	at com.all.mobile.web.services.TestSearchService.shouldThrowExceptionInInitializeLuceneIndex(TestSearchService.java:137)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:22)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:115)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)
+ERROR [main] (SearchService.java:69) - Unexpected error looking for SÓmë Keywörd
+java.lang.RuntimeException: some lucene exception
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:59)
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:53)
+	at com.all.mobile.web.services.TestSearchService.shouldReturnEmptyCollectionIfExceptionSearchingTracks(TestSearchService.java:171)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:59)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.executeTestSet(AbstractDirectoryTestSuite.java:115)
+	at org.apache.maven.surefire.suite.AbstractDirectoryTestSuite.execute(AbstractDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.Surefire.run(Surefire.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)
+	at org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)
+ INFO [main] (MobileTopHundredController.java:35) - 
+ACTION:ListCategories:
+ INFO [main] (MobileTopHundredController.java:43) - 
+ACTION:ListTopPlaylistByCategory:1
+ INFO [main] (MobileTopHundredController.java:51) - 
+ACTION:ListTopPlaylistTracks:123415
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.some file problem
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.No coverart for: trackId
+ INFO [main] (MobileTopHundredController.java:35) - 
+ACTION:ListCategories:
+ INFO [main] (MobileTopHundredController.java:43) - 
+ACTION:ListTopPlaylistByCategory:1
+ INFO [main] (MobileTopHundredController.java:51) - 
+ACTION:ListTopPlaylistTracks:123415
+ INFO [main] (MobileTrackController.java:50) - 
+ACTION:CacheTrack:'trackId'
+ INFO [main] (MobileTrackController.java:43) - 
+ACTION:SearchTracks:'keyword'
+ INFO [main] (MobileTrackController.java:59) - 
+ACTION:Content for Widget:'model'
+ERROR [main] (CacheService.java:69) - Exception caching track : trackId.mp3
+java.io.IOException: E.g., Permission Denied
+	at com.all.mobile.web.services.CacheService.cacheTrack(CacheService.java:65)
+	at com.all.mobile.web.services.TestCacheService.shouldFailWhenCannotCacheFile(TestCacheService.java:159)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ INFO [main] (SearchService.java:98) - Lucene indexes creation took [ms]: 1
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ERROR [main] (SearchService.java:94) - Unexpected exception creating lucene indexes
+java.lang.InterruptedException
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:92)
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:85)
+	at com.all.mobile.web.services.TestSearchService.shouldThrowExceptionInInitializeLuceneIndex(TestSearchService.java:137)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:22)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ERROR [main] (SearchService.java:69) - Unexpected error looking for SÓmë Keywörd
+java.lang.RuntimeException: some lucene exception
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:59)
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:53)
+	at com.all.mobile.web.services.TestSearchService.shouldReturnEmptyCollectionIfExceptionSearchingTracks(TestSearchService.java:171)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ INFO [main] (WidgetController.java:32) - 
+ACTION:getting playlist:1
+ INFO [main] (MobileTopHundredController.java:35) - 
+ACTION:ListCategories:
+ INFO [main] (MobileTopHundredController.java:43) - 
+ACTION:ListTopPlaylistByCategory:1
+ INFO [main] (MobileTopHundredController.java:51) - 
+ACTION:ListTopPlaylistTracks:123415
+ERROR [main] (CacheService.java:69) - Exception caching track : trackId.mp3
+java.io.IOException: E.g., Permission Denied
+	at com.all.mobile.web.services.CacheService.cacheTrack(CacheService.java:65)
+	at com.all.mobile.web.services.TestCacheService.shouldFailWhenCannotCacheFile(TestCacheService.java:159)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ INFO [main] (MobileTrackController.java:50) - 
+ACTION:CacheTrack:'trackId'
+ INFO [main] (MobileTrackController.java:43) - 
+ACTION:SearchTracks:'keyword'
+ INFO [main] (MobileTrackController.java:59) - 
+ACTION:Content for Widget:'model'
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ INFO [main] (SearchService.java:98) - Lucene indexes creation took [ms]: 1
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ERROR [main] (SearchService.java:94) - Unexpected exception creating lucene indexes
+java.lang.InterruptedException
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:92)
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:85)
+	at com.all.mobile.web.services.TestSearchService.shouldThrowExceptionInInitializeLuceneIndex(TestSearchService.java:137)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:22)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ERROR [main] (SearchService.java:69) - Unexpected error looking for SÓmë Keywörd
+java.lang.RuntimeException: some lucene exception
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:59)
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:53)
+	at com.all.mobile.web.services.TestSearchService.shouldReturnEmptyCollectionIfExceptionSearchingTracks(TestSearchService.java:171)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ INFO [main] (WidgetController.java:32) - 
+ACTION:getting playlist:1
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.some file problem
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.No coverart for: trackId
+ INFO [main] (MobileTopHundredController.java:35) - 
+ACTION:ListCategories:
+ INFO [main] (MobileTopHundredController.java:43) - 
+ACTION:ListTopPlaylistByCategory:1
+ INFO [main] (MobileTopHundredController.java:51) - 
+ACTION:ListTopPlaylistTracks:123415
+ERROR [main] (CacheService.java:69) - Exception caching track : trackId.mp3
+java.io.IOException: E.g., Permission Denied
+	at com.all.mobile.web.services.CacheService.cacheTrack(CacheService.java:65)
+	at com.all.mobile.web.services.TestCacheService.shouldFailWhenCannotCacheFile(TestCacheService.java:159)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ INFO [main] (MobileTrackController.java:50) - 
+ACTION:CacheTrack:'trackId'
+ INFO [main] (MobileTrackController.java:43) - 
+ACTION:SearchTracks:'keyword'
+ INFO [main] (MobileTrackController.java:59) - 
+ACTION:Content for Widget:'model'
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ INFO [main] (SearchService.java:98) - Lucene indexes creation took [ms]: 1
+ INFO [main] (SearchService.java:43) - Last index date is null
+ INFO [main] (SearchService.java:89) - Creating lucene indexes...
+ERROR [main] (SearchService.java:94) - Unexpected exception creating lucene indexes
+java.lang.InterruptedException
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:92)
+	at com.all.mobile.web.services.SearchService$CreateLuceneIndexesTask.doInHibernate(SearchService.java:85)
+	at com.all.mobile.web.services.TestSearchService.shouldThrowExceptionInInitializeLuceneIndex(TestSearchService.java:137)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:22)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ERROR [main] (SearchService.java:69) - Unexpected error looking for SÓmë Keywörd
+java.lang.RuntimeException: some lucene exception
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:59)
+	at com.all.mobile.web.services.SearchService$1.doInHibernate(SearchService.java:53)
+	at com.all.mobile.web.services.TestSearchService.shouldReturnEmptyCollectionIfExceptionSearchingTracks(TestSearchService.java:171)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:44)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:180)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:41)
+	at org.junit.runners.ParentRunner$1.evaluate(ParentRunner.java:173)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:220)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:49)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+ INFO [main] (WidgetController.java:33) - 
+ACTION:getting playlist:1
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.some file problem
+ WARN [main] (ArtworkUtil.java:28) - Could not extract artwork.No coverart for: trackId
