@@ -92,11 +92,11 @@
 	<repositories>
 		<repository>
 			<id>ArchivaSnapshots</id>
-			<url>http://ci.undahee.net/archiva/repository/snapshots</url>
+			<url>http://positivevibration.com:8082/archiva/repository/snapshots</url>
 		</repository>
 		<repository>
 			<id>ArchivaInternal</id>
-			<url>http://ci.undahee.net/archiva/repository/internal</url>
+			<url>http://www.positivevibration.com:8082/archiva/repository/internal</url>
 		</repository>
 	</repositories>
 
@@ -104,12 +104,12 @@
 		<repository>
 			<id>archiva.internal</id>
 			<name>Internal Release Repository</name>
-			<url>http://ci.undahee.net/archiva/repository/internal</url>
+			<url>http://www.positivevibration.com:8082/archiva/repository/internal</url>
 		</repository>
 		<snapshotRepository>
 			<id>archiva.snapshots</id>
 			<name>Internal Snapshot Repository</name>
-			<url>http://ci.undahee.net/archiva/repository/snapshots</url>
+			<url>http://www.positivevibration.com:8082/archiva/repository/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 
